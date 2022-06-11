@@ -1,0 +1,16 @@
+name: Kubescape1
+on:
+  push:
+    branches: [ main ]
+  pull-request:
+    branches: [ main ]
+jobs:
+  nsa:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check
+        uses: actions/checkout@v2
+      - name: Install Kubescape
+        run: curl -s https://raw.githubusercontent.com/armosec/kubescape/master/install.sh | /bin/bash
+      - name: Scan YAML files
+        run: kubescape scan framework nsa *.yaml
