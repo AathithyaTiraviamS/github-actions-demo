@@ -7,7 +7,7 @@ on:
     branches: 
       - main
 jobs:
-  nsa:
+  nsa-security-check:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
