@@ -9,4 +9,4 @@ jobs:
       - name: Install Kubescape
         run: curl -s https://raw.githubusercontent.com/armosec/kubescape/master/install.sh | /bin/bash
       - name: Scan YAML files
-        run: kubescape scan --submit --account=c5c1e88a-e170-4e78-bb05-ba8915852e27
+        run: kubescape scan framework nsa *.yaml
