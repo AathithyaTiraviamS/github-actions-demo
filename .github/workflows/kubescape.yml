@@ -1,4 +1,4 @@
-name: Kubescape 
+name: Kubesca 
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
     branches: [ master ]
    
 jobs:
-  nsa-security-check:
+  nsa-s:
     runs-on: ubuntu-latest
 
     steps:
